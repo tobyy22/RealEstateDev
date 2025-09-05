@@ -103,7 +103,6 @@ class FrozenCLIPEmbedder(AbstractEncoder):
         local_dir = snapshot_download(
             repo_id="openai/clip-vit-large-patch14",
             repo_type="model",
-            local_files_only=True
         )
 
         self.tokenizer = CLIPTokenizer.from_pretrained(local_dir, local_files_only=True, use_fast=False)
